@@ -75,7 +75,7 @@ if submit:
         'spectral_class_O':[0]}
 
     df=pd.DataFrame(d)
-    df['star_color_'+star_color]=
+    df['star_color_'+star_color]=1
     df['spectral_class_'+orbitalClass]=1
 
     picturename=""
