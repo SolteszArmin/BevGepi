@@ -84,19 +84,18 @@ if submit:
     prediction=logModel.predict(df)
     predicted=prediction[0]
     st.write(starTypes[predicted])
-    match predicted:
-        case 0:
-            picturename="BrownDwarf.jpg"
-        case 1:
-            picturename="RedDwarf.png"
-        case 2:
-            picturename="WhiteDwarf.jpg"
-        case 3:
-            picturename="mainSequence.jpg"
-        case 4:
-            picturename="mainSequence.jpg"
-        case 5:
-            picturename="hypergiant.jpg"
+    if predicted==0:
+        picturename="BrownDwarf.jpg"
+    elif predicted==1:
+        picturename="RedDwarf.png"
+    elif predicted==2:
+        picturename="WhiteDwarf.jpg"
+    elif predicted==3:
+        picturename="mainSequence.jpg"
+    elif predicted==4:
+        picturename="mainSequence.jpg"
+    else:
+        picturename="hypergiant.jpg"
     
     st.image(picturename, caption=starTypes[predicted])
 
