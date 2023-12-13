@@ -82,8 +82,9 @@ if submit:
 
     picturename=""
     prediction=logModel.predict(df)
-    st.write(starTypes[prediction[0]])
-    match prediction[0]:
+    predicted=prediction[0]
+    st.write(starTypes[predicted])
+    match predicted:
         case 0:
             picturename="BrownDwarf.jpg"
         case 1:
@@ -97,7 +98,7 @@ if submit:
         case 5:
             picturename="hypergiant.jpg"
     
-    st.image(picturename, caption=starTypes[prediction[0]])
+    st.image(picturename, caption=starTypes[predicted])
 
                 
             
