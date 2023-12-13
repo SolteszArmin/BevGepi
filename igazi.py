@@ -1,11 +1,9 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import sklearn as sk
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-import pickle
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 df=pd.read_csv("Stars.csv")
 
@@ -77,7 +75,7 @@ if submit:
         'spectral_class_O':[0]}
 
     df=pd.DataFrame(d)
-    df['star_color_'+star_color]=1
+    df['star_color_'+star_color]=
     df['spectral_class_'+orbitalClass]=1
 
     picturename=""
